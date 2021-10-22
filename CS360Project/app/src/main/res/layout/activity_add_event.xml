@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@color/background_color"
+tools:context=".AddEvent">
+
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:gravity="center"
+    android:id="@+id/eventHeaderLayout">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_event_header"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_event_subheader"
+        android:textAlignment="center"
+        android:textColor="@color/accent_text"
+        android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventTitleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventHeaderLayout"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_event_title_header"
+            android:textColor="@color/accent_text"
+            android:textSize="20dp"
+            android:paddingRight="10dp"/>
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventYearMonthDayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/eventTitleLayout">
+
+        <LinearLayout
+            android:id="@+id/eventYMDTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_event_year_header"
+                android:textColor="@color/accent_text"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/eventYear"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_event_month_header"
+                android:textColor="@color/accent_text"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/eventMonth"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_event_day_header"
+                android:textColor="@color/accent_text"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/eventDay"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/eventHMTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/eventYearMonthDayLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_event_hour_header"
+                android:textColor="@color/accent_text"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/eventHour"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_event_minute_header"
+                android:textColor="@color/accent_text"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/eventMinute"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_edittext"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/eventDescriptionLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/eventHMTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_event_description_header"
+            android:textColor="@color/accent_text"
+            android:textSize="20dp"
+            android:paddingRight="10dp"/>
+
+        <EditText
+            android:id="@+id/eventDescription"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edittext"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventButtonLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventDescriptionLayout">
+
+        <Button
+            android:id="@+id/eventAddSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="addEvent"
+            android:text="@string/add_event_button_submit" />
+
+        <Button
+            android:id="@+id/eventCancelSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="cancelAddEvent"
+            android:text="@string/add_event_button_cancel" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

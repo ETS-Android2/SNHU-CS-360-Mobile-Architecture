@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/registerHeader"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/register_header"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/registerSubHeader"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:paddingBottom="20dp"
+            android:text="@string/register_subHeader"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/registerUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="95dp" />
+
+        <EditText
+            android:id="@+id/registerUsernameField"
+            android:layout_width="218dp"
+            android:layout_height="43dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="-32dp" />
+
+        <TextView
+            android:id="@+id/registerPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="95dp"/>
+
+        <EditText
+            android:id="@+id/registerPasswordField"
+            android:layout_width="218dp"
+            android:layout_height="43dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="-32dp"/>
+
+        <TextView
+            android:id="@+id/registerNameNotUnique"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register_name_not_unique"
+            android:textAlignment="center"
+            android:textColor="@color/warning_red"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/registerMainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/register_button" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
